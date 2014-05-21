@@ -4,7 +4,7 @@ module P02 (
 
 import Lib
 
-solve :: (Num a, Integral a) => a
+solve :: (Num a, Integral a) => Int -> a
 
 
-solve = sum $ filter even $ takeWhile (<4000000) $ fibFromList [1..]
+solve n = sum $ filter even $ takeWhile (<n) $ fibFromList [1..]
